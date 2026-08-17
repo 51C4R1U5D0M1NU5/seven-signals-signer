@@ -1,0 +1,24 @@
+name: Verify live signer
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch deployed signer
+        run: |
+          curl -fsSL https://seven-signals-signer1.vercel.app -o live.html
+          echo "source_sha256=$(sha256sum index.html | awk '{print $1}')"
+          echo "live_sha256=$(sha256sum live.html | awk '{print $1}')"
+          cmp -s index.html live.html
+          grep -Fq 'SEVEN SIGNALS - Base Sepolia' live.html
+          grep -Fq 'db68fa32e68f5e788258d78a71b64f902628ebdf74c6a4d00fa5f146edbd4102' live.html
+          grep -Fq 'Connect Base wallet' live.html
+          grep -Fq 'Approve test deployment' live.html
+          ! grep -Fq 'Login – Vercel' live.html
+          echo 'LIVE_SIGNER_MATCH=1'
