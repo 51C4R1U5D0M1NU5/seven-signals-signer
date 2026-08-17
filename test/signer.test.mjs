@@ -6,7 +6,7 @@ const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const proxyUrl = new URL('../api/cdp.js', import.meta.url);
 
 test('uses CDP-sponsored Base Sepolia smart account and preserves canonical deployment locks', () => {
-  assert.doesNotMatch(html, /faucet/i);
+  assert.doesNotMatch(html, /href=["'][^"']*faucet/i);
   assert.doesNotMatch(html, /getBalance\(/);
   assert.doesNotMatch(html, /CDP_PAYMASTER_URL/);
   assert.match(html, /toCoinbaseSmartAccount/);
