@@ -18,3 +18,8 @@ test('uses a disposable local Base Sepolia signer and preserves deployment locks
   assert.match(html, /0x78ceE8B10C4FC39FbD47B17Bb78aADe2838d05DC/);
   assert.match(html, /Base Sepolia only/);
 });
+
+test('links to the current Alchemy Base Sepolia faucet', () => {
+  assert.doesNotMatch(html, /bwarelabs\.com/i);
+  assert.match(html, /https:\/\/www\.alchemy\.com\/faucets\/base-sepolia/);
+});
