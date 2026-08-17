@@ -20,12 +20,15 @@ jobs:
           cmp -s index.html live.html
           grep -Fq 'SEVEN SIGNALS - Base Sepolia' live.html
           grep -Fq 'db68fa32e68f5e788258d78a71b64f902628ebdf74c6a4d00fa5f146edbd4102' live.html
-          grep -Fq 'Disposable Base Sepolia signer' live.html
-          grep -Fq 'https://sepolia.base.org' live.html
-          grep -Fq 'Get free Base Sepolia ETH' live.html
-          grep -Fq 'Approve test deployment' live.html
-          grep -Fq 'ethers.Wallet.createRandom' live.html
+          grep -Fq 'Sponsored Base Sepolia smart account' live.html
+          grep -Fq "http('/api/cdp')" live.html
+          grep -Fq 'toCoinbaseSmartAccount' live.html
+          grep -Fq 'createBundlerClient' live.html
+          grep -Fq 'paymaster:true' live.html
+          grep -Fq 'Approve sponsored test deployment' live.html
+          ! grep -Fq 'faucet' live.html
+          ! grep -Fq 'CDP_PAYMASTER_URL' live.html
           ! grep -Fq 'createBaseAccountSDK' live.html
           ! grep -Fq 'window.ethereum' live.html
           ! grep -Fq 'Login – Vercel' live.html
-          echo 'LIVE_SIGNER_MATCH=1'
+          echo 'LIVE_SPONSORED_SIGNER_MATCH=1'
