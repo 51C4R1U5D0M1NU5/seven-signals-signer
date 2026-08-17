@@ -1,0 +1,21 @@
+name: Verify Base Sepolia deployment
+on:
+  push:
+    paths:
+      - scripts/verify-sepolia.mjs
+      - .github/workflows/verify-sepolia-chain.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-chain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install verifier dependency
+        run: npm install --no-save ethers@6.15.0
+      - name: Verify receipt, CREATE2 address, runtime and contract state
+        run: node scripts/verify-sepolia.mjs
