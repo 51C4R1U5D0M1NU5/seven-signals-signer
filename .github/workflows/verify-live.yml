@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Run signer regression test
+        run: node --test test/signer.test.mjs
       - name: Fetch deployed signer
         run: |
           curl -fsSL https://seven-signals-signer1.vercel.app -o live.html
