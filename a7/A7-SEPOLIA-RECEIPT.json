@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "status": "ONCHAIN_VERIFIED",
+  "verifiedAt": "2026-08-26T14:26:05.718Z",
+  "chainId": 84532,
+  "a6": {
+    "finalSealCommit": "40be6ba1a55f81c62472de0ad756c5b2a33fe656",
+    "reviewedPayloadCommit": "21b6e54333b34a2b719749bbfa69f94b4609ea6a",
+    "reviewedPayloadTree": "f38faef6aa748279e9ec163bc956d9ace898f200",
+    "releaseManifestSha256": "bcd2448140aaa41298d98f049bcaa5adfce9b7e638860eb5733f4f2a497d3ea5",
+    "sourceZipSha256": "056fe365bb735d1405345a1348a921a02b9999dc70e327f5473c42c87954c64a"
+  },
+  "sourceBoundPayload": {
+    "payloadFileSha256": "c4ca0a005fd240293266610d6a92146ee2374267eff3ce9561e604322f0b5aec",
+    "calldataSha256": "92c96ebaa4a7211895c42ba9e8ef8fee41c0c9d6149fc80397841e649830c312",
+    "initCodeKeccak256": "0x1419f91818c7a82af401a9817221551de4ed1f1af69e3c39b1910987d7d42c08",
+    "runtimeSha256": "b14fee39aef196e8f78f60808cb9c11923af898f2e1dd10d77eab55a1fb097b1",
+    "runtimeBytes": 8768,
+    "salt": "0x3c5e896b0a1eca92211e0cf1f4a5ad1a8ee656650f61c0b76d520d28bf568157",
+    "factory": "0x13b0D85CcB8bf860b6b79AF3029fCA081AE9beF2",
+    "predictedAddress": "0xaBe4846D78E4247Ef3aD18016274dE93f710306e"
+  },
+  "deployment": {
+    "smartAccount": "0x5b21c875b1eb075832D35fC94773206B7662e2f2",
+    "sponsored": true,
+    "transactionValueWei": "0",
+    "userOperationHash": "0xc6c26f8e4eaae28ee521d09b568610682965340efc968dc614a28140f3431ca9",
+    "transactionHash": "0x9613b55c47a084c211fcbb1999fcf01d323ebd8c59abbc767818552e2450ecc1",
+    "blockNumber": "45993037",
+    "gasUsed": "2744849",
+    "effectiveGasPrice": "6000000"
+  },
+  "readbacks": {
+    "owner": "0x78ceE8B10C4FC39FbD47B17Bb78aADe2838d05DC",
+    "pendingOwner": "0x0000000000000000000000000000000000000000",
+    "paused": true,
+    "contractURI": "ipfs://bafybeiev7ic35z74v4ustvsnm6x6rl72wnv7l3qjc2buezjcwtuqsi6svi/collection.json",
+    "royalty": {
+      "receiver": "0x78ceE8B10C4FC39FbD47B17Bb78aADe2838d05DC",
+      "bps": 750
+    },
+    "interfaces": {
+      "0x01ffc9a7": true,
+      "0xd9b67a26": true,
+      "0x0e89341c": true,
+      "0x2a55205a": true
+    },
+    "codeSha256": "b14fee39aef196e8f78f60808cb9c11923af898f2e1dd10d77eab55a1fb097b1",
+    "balanceWei": "0",
+    "tokens": [
+      {"tokenId":1,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/1.json","cap":"10","mintPriceWei":"1220072634990869","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":2,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/2.json","cap":"5","mintPriceWei":"2846836148312029","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":3,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/3.json","cap":"1","mintPriceWei":"4880290539963479","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":4,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/4.json","cap":"1","mintPriceWei":"4880290539963479","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":5,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/5.json","cap":"10","mintPriceWei":"1220072634990869","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":6,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/6.json","cap":"5","mintPriceWei":"2846836148312029","mintedSupply":"0","totalSupply":"0"},
+      {"tokenId":7,"uri":"ipfs://bafybeihcacgfdxuvw4jt7ykepwpyw2hax7d67jdyppcjmpoyv7elneuvai/7.json","cap":"1","mintPriceWei":"10167271958257248","mintedSupply":"0","totalSupply":"0"}
+    ]
+  }
+}
