@@ -1,0 +1,31 @@
+name: Deploy canonical SEVEN SIGNALS to Base Sepolia
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'a7/TRIGGER_CANONICAL_SEPOLIA'
+permissions:
+  contents: read
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned deployment client
+        run: |
+          npm init -y >/dev/null 2>&1
+          npm install --no-save --ignore-scripts viem@2.37.9
+      - name: Source-bound sponsored Base Sepolia deployment
+        run: node a7/deploy-canonical-sepolia.mjs
+      - name: Upload verified deployment receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seven-signals-a7-sepolia-receipt
+          path: a7-sepolia-receipt.json
+          if-no-files-found: error
+          retention-days: 90
